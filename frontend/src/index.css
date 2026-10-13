@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+  }
+  h1, h2, h3 {
+    @apply font-serif text-ink;
+  }
+ 
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid #8C2F39;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm bg-maroon px-5 py-2.5 text-sm font-semibold text-paper transition-colors hover:bg-maroon-dark disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm border border-ink px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-ink hover:text-paper;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm px-4 py-2 text-sm font-medium text-slate transition-colors hover:text-ink;
+  }
+  .input-field {
+    @apply w-full rounded-sm border border-line bg-white px-3.5 py-2.5 text-sm text-ink placeholder:text-slate/70 focus:border-ink;
+  }
+  .card {
+    @apply rounded-sm border border-line bg-white;
+  }
+  .page-container {
+    @apply mx-auto w-full max-w-content px-4 sm:px-6 lg:px-8;
+  }
+  .section-title {
+    @apply font-serif text-2xl font-semibold text-ink;
+  }
+}
